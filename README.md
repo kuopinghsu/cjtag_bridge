@@ -19,7 +19,7 @@ and using [Veriltor](https://github.com/verilator/verilator) for simulation.
 
 ## Top Entity
 
-The top entity is [`rtl/cjtag_bridge.vhd`](https://github.com/stnolting/cjtag_bridge/blob/main/rtl/cjtag_bridge.vhd):
+The top entity is [`rtl/cjtag_bridge.v`](rtl/cjtag_bridge.v):
 
 ```verilog
 module cjtag_bridge (
