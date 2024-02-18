@@ -1,3 +1,2 @@
-sim/*.cf
-sim/*.ghw
-sim/*.vcd
+sim/sim_cc
+sim/wave.*
