@@ -96,7 +96,7 @@ module cjtag_bridge (
     reg         ctrl_tms;
 
     // debugging signals
-    reg [1:0]debug_tck_sync;
+    reg [1:0]   debug_tck_sync;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // cJTAG Input Signal Synchronizer
@@ -120,7 +120,7 @@ assign io_sync_tmsc_falling = (io_sync_tmsc_ff[2:1] == 2'b10);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Reset Controller
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-always @( negedge rstn_i or posedge clk_i)
+always @(negedge rstn_i or posedge clk_i)
 begin: bridge_reset
     if ( !rstn_i ) begin
         reset_cnt  <= 'd0;
@@ -156,7 +156,7 @@ assign reset_fire = (reset_sreg == 2'b01);
 // Bridge Activation Control
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 always @(negedge rstn_i or posedge clk_i)
-begin : bridge_status
+begin: bridge_status
     if ( !rstn_i ) begin
         status_online <= 1'b0;
         status_sreg   <= 'd0;
@@ -242,7 +242,6 @@ begin: bridge_control
                         end
                     end
                 end
-
             end
         end
     end
